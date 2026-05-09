@@ -12,12 +12,12 @@
 
   </p>
 <p align="center">
-    <a href="" rel="external nofollow noopener" target="_blank">2024 IEEE International Conference on Unmanned Systems (ICUS)</a>
+    <a href="https://ieeexplore.ieee.org/document/10840082" rel="external nofollow noopener" target="_blank">2024 IEEE International Conference on Unmanned Systems (ICUS)</a>
   <p align="center">
     <img src="assets/1.png" alt="Description of the image" width="600" height="600">
   <p align="center">
 <p align="center" style="font-size: 18px; color: gray;">
-    Fig. 1. Fig. 1.	Illustration of the visual process of the reverse-time image restoration. The first row is the example of Latent-IRSDE for deraining, and the second row is the example of Latent-IRSDE for deblurring.
+    Fig. 1. Illustration of the visual process of the reverse-time image restoration. The first row is the example of Latent-IRSDE for deraining, and the second row is the example of Latent-IRSDE for deblurring.
 </p>
 <p align="center">
     <img src="assets/2.png" alt="" width="600" height="600">
