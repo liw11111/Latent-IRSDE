@@ -14,16 +14,16 @@
 <p align="center">
     <a href="" rel="external nofollow noopener" target="_blank">2024 IEEE International Conference on Unmanned Systems (ICUS)</a>
   <p align="center">
-    <img src="assets/1.jpeg" alt="Description of the image" width="600" height="600">
+    <img src="assets/1.png" alt="Description of the image" width="600" height="600">
   <p align="center">
 <p align="center" style="font-size: 18px; color: gray;">
-    Fig. 1. Applications of tracking a fixed-wing UAV. (a) a UAV landing on a ship. (b) a UAV landing on airport. (c) a UAV pose estimation. (d) a UAV pose estimation.
+    Fig. 1. Fig. 1.	Illustration of the visual process of the reverse-time image restoration. The first row is the example of Latent-IRSDE for deraining, and the second row is the example of Latent-IRSDE for deblurring.
 </p>
 <p align="center">
-    <img src="assets/2.jpeg" alt="" width="600" height="600">
+    <img src="assets/2.png" alt="" width="600" height="600">
 </p>
 <p align="center" style="font-size: 18px; color: gray;">
-    Fig. 2. Pipeline of the fixed-wing UAV tracking.
+    Fig. 2. Architecture of Latent-IRSDE, which contains two parts including diffusion-based image restoration and pretrained encoder-decoder model. The method accomplishes the restoration tasks by modeling diffusion processes between a low-quality image ( μ ) with guassian noise (∈~ N (0,λ^2)) and its high-quality image (x(0)).
 </p>
 
 ## **Abstract** 📝
@@ -62,85 +62,51 @@ Achieves state-of-the-art inference speed on deblurring and deraining tasks for 
 
 ## **Quick View** 📊
 ### Dataset Examples
-#### The fixed-wing UAV.
+#### Visual image of our IR-UAV2UAV dataset. The first column shows the ground-truth images, and second column shows the rain images. Last column is the blur images.
 <p align="center">
-    <img src="assets/3.jpeg" alt="Dataset Overview" width="600" height="600">
+    <img src="assets/3.png" alt="Dataset Overview" width="600" height="600">
 </p>
 
-#### Dataset Overview 
-<p align="center">
-    <img src="assets/4.jpeg" alt="" width="600" height="600">
-</p>
-<p align="center" style="font-size: 18px; color: gray;">
-    The UAV is denoted in red rectangle box.(a) Tiny object. (b) Motion blur. (c) Out of focus. (d) 3D rotation.
-</p>
-
-#### Bounding Box 
-<p align="center">
-    <img src="assets/5.jpeg" alt="" width="600" height="600">
-</p>
-<p align="center" style="font-size: 18px; color: gray;">
-    (a) Area distribution of the UAV bounding box. (b) Width distribution of the UAV bounding box. (c) Height distribution of the UAV bounding box.
-</p>
-
-#### Illustration of the training images
-<p align="center">
-  <img src="assets/6.jpeg" alt="" width="600" height="600">
-</p>
 
 ## **Experimental Results**🖼️
-### Success and precision of the hand-crafted feature-based methods
+### Visual results of our Latent-IRSDE methods with IR-SDE on the IR-UAV2UAV validation dataset for deraining and deblurring.
 <p align="center">
-    <img src="assets/7.jpeg" alt="" width="600" height="600">
+    <img src="assets/4.png" alt="" width="600" height="600">
 </p>
 
-### Success and precision of the deep learning-based methods
+### Table quantitative comparison between our latent-IRSDE with IR-SDE on IR-UAV2UAV
 <p align="center">
-    <img src="assets/8.jpeg" alt="" width="600" height="600">
+    <img src="assets/5.png" alt="" width="600" height="600">
 </p>
 
-### Qualitative results of four methods in three typical difficult challenges
-<p align="center">
-    <img src="assets/9.jpeg" alt="" width="600" height="600">
-</p>
-<p align="center" style="font-size: 18px; color: gray;">
-    (a) low resolution. (b) motion blur and rotation. (c) scale variation.
-</p>
 
 ---
 
 ## **Quick Start** 🚀
 
 ### Dataset
-- **GFUAVT**: [Baidu Drive (mt2h)](https://pan.baidu.com/s/1w59YcuoDV_X7bq23Yo2Tew)  
+- **IR-UAV2UAV**: [Baidu Drive (mt2h)](https://pan.baidu.com/s/1w59YcuoDV_X7bq23Yo2Tew)  
 
 
-### Dataset Structure
-```
 
-├── GFUAVT                      # GFUAVT dataset
-│   ├── anno                    # Annotations (47)
-│   │   ├── img001001.txt
-│   │   └── ...
-│   ├── frames                  #  Images
-│   │   ├── img001001
-│   │   │   ├── 00000041.jpg
-│   │   └── ...
 
-```
 
 ---
 
 ## **Citation** 📚
 
-If you find **GFUAVT** helpful in your research, please consider citing:
+If you find **latent-IRSDE** helpful in your research, please consider citing:
 ```bibtex
-@inproceedings{GFUAVT,
-  title={Ground view fixed-wing UAV tracking dataset and experimental evaluation},
-  author={Yong Wanga, Wei Lia, Xiangyu Zhua, Lu Dingb},
-  booktitle={Unmanned Systems},
-  year={2026}
-}
+@INPROCEEDINGS{10840082,
+  author={Li, Wei and Li, Chengwei and Jiang, Hongqian and Wang, Yong and Wu, Shunan and Wu, Zhigang},
+  booktitle={2024 IEEE International Conference on Unmanned Systems (ICUS)}, 
+  title={High-Resolution Aerial Image Restoration with Latent Diffusion Models}, 
+  year={2024},
+  volume={},
+  number={},
+  pages={1874-1878},
+  keywords={Autonomous systems;Transforms;Diffusion models;Autonomous aerial vehicles;Image restoration;UAV;high-resolution image restoration;diffusion model;AutoEncoder},
+  doi={10.1109/ICUS61736.2024.10840082}}
 ```
 
 ---
